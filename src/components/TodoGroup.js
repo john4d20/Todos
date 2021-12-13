@@ -1,9 +1,17 @@
 import TodoItem from "./TodoItem";
-import { useState } from "react";
+
 function TodoGroup(props){
 
     return (
-        <TodoItem todo={props.todo}></TodoItem>
+        <div>
+            <span>
+                {
+                    props.todoList.map((item,index)=>(
+                        <TodoItem key={item+index} todo={item}></TodoItem>
+                    ))
+                }
+            </span>
+        </div>
     )
 }
 

@@ -6,12 +6,10 @@ function TodoGenerator(props){
 
     function add(){
         props.updateTodo(todo);
-        console.log('todo',todo);
     }
 
     function handleChangeTodo(event){
         setTodo(event.target.value)
-        console.log('event.target.value',event.target.value);
         
     }
     
