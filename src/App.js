@@ -6,8 +6,7 @@ import TodoGenerator from './components/TodoGenerator';
 function App() {
   return (
     <div className="App">
-      {/* <TodoList></TodoList> */}
-      <TodoGenerator></TodoGenerator>
+      <TodoList></TodoList>
     </div>
   );
 }

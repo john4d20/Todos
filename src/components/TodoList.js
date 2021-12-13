@@ -1,6 +1,13 @@
+import TodoGenerator from "./TodoGenerator";
+import TodoGroup from "./TodoGroup";
+
 function TodoList(){
     return (
-        <>test</>
+        <div>
+            <TodoGroup></TodoGroup>
+            <TodoGenerator></TodoGenerator>
+        </div>
+        
     )
 }
 
