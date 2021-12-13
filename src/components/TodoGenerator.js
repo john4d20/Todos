@@ -5,13 +5,19 @@ function TodoGenerator(props){
     const[todo,setTodo] = useState("");
 
     function add(){
-        setTodo(todo)
         props.updateTodo(todo);
+        console.log('todo',todo);
+    }
+
+    function handleChangeTodo(event){
+        setTodo(event.target.value)
+        console.log('event.target.value',event.target.value);
+        
     }
     
     return(
         <>
-            <input value={todo} type="String"></input>
+            <input value={todo} type="text" onChange={handleChangeTodo}></input>
             <button onClick={add}>add</button>
         </>
     )

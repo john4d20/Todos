@@ -1,7 +1,9 @@
 import TodoItem from "./TodoItem";
-function TodoGroup(){
+import { useState } from "react";
+function TodoGroup(props){
+
     return (
-        <TodoItem></TodoItem>
+        <TodoItem todo={props.todo}></TodoItem>
     )
 }
 
