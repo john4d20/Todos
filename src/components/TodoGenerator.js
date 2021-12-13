@@ -15,8 +15,8 @@ function TodoGenerator(props){
     
     return(
         <>
-            <input value={todo} type="text" onChange={handleChangeTodo}></input>
-            <button onClick={add}>add</button>
+            <input value={todo} type="text" onChange={handleChangeTodo} className="inputField"></input>
+            <button onClick={add} className="addButton">add</button>
         </>
     )
 }
