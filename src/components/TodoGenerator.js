@@ -5,7 +5,11 @@ function TodoGenerator(props){
     const[todo,setTodo] = useState("");
 
     function add(){
-        props.updateTodo(todo);
+        if(todo !== ""){
+            props.updateTodo(todo);
+            setTodo("");
+        }
+        
     }
 
     function handleChangeTodo(event){
