@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "../styles/TodoGernerator.css"
 
 function TodoGenerator(props){
 
@@ -19,8 +20,8 @@ function TodoGenerator(props){
     
     return(
         <>
-            <input value={todo} type="text" onChange={handleChangeTodo} className="inputField"></input>
-            <button onClick={add} className="addButton">add</button>
+            <input value={todo} type="text" onChange={handleChangeTodo} className="Input-field"></input>
+            <button onClick={add} className="Add-button">add</button>
         </>
     )
 }

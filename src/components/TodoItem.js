@@ -1,8 +1,9 @@
+import "../styles/TodoItem.css"
+
 function TodoItem(props){
-    console.log('props.todo',props.todo);
     return(
         
-        <div className="toDoItem">
+        <div className="Todo-item">
            {props.todo}
         </div>
     )

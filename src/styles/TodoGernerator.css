@@ -1,0 +1,13 @@
+.Add-button{
+    background-color: rgb(46, 77, 180);
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    margin-left: 5px;
+  }
+  
+.Input-field{
+    margin-top: 10px;
+    border-radius: 5px;
+    padding: 5px;
+  }

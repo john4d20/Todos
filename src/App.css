@@ -42,29 +42,3 @@
 }
 
 
-
-.addButton{
-  background-color: rgb(46, 77, 180);
-  color: white;
-  border-radius: 5px;
-  padding: 5px;
-  margin-left: 5px;
-}
-
-
-
-.inputField{
-  margin-top: 10px;
-  border-radius: 5px;
-  padding: 5px;
-}
-
-
-
-.toDoItem{
-  margin: auto;
-  margin-top: 3px;
-  width: 30%;
-  padding: 5px;
-  border: 2px solid black;
-}
