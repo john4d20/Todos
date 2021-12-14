@@ -10,8 +10,8 @@ function TodoGenerator(props){
 
     function add(){
         if(todo !== ""){
-        dispatch({type: UPDATE_SIZE, payload: 1})
-        dispatch({type: UPDATE_TODO_LIST, payload:{"content": todo, "ID":uuidv4(), "done": "false"}})
+            dispatch({type: UPDATE_SIZE, payload: 1})
+            dispatch({type: UPDATE_TODO_LIST, payload:{"content": todo, "ID":uuidv4(), "done": false}})
             setTodo("");
         }
         

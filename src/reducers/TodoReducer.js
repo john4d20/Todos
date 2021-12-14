@@ -1,4 +1,4 @@
-import {UPDATE_TODO_LIST,UPDATE_SIZE} from "../constants/constant";
+import {UPDATE_TODO_LIST,UPDATE_SIZE, TOGGLE_TODO} from "../constants/constant";
 
 const initState = {size: 0, todoList: []};
 const TodoReducer = (state = initState, action) => {
@@ -8,6 +8,13 @@ const TodoReducer = (state = initState, action) => {
             return {...state, size: state.size + 1};
         case UPDATE_TODO_LIST:
             return {...state, todoList: [...state.todoList, action.payload]}
+        case TOGGLE_TODO:
+            return {...state, todoList: state.todoList.map(function(object){
+                if(object.ID === action.payload){
+                    object.done = !object.done;
+                }
+                return object;
+            })};
         default:
             return state;
     }

@@ -1,14 +1,8 @@
-import { useState } from "react";
+
 import TodoGenerator from "./TodoGenerator";
 import TodoGroup from "./TodoGroup";
 
 function TodoList(){
-    // const [todoList,setTodoList] = useState([]);
-    // function updateTodo(todo){
-    //     setTodoList([...todoList,todo])    
-    // }
-
-
 
     return (
         <div>
