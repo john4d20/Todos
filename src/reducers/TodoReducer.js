@@ -1,4 +1,4 @@
-import {UPDATE_TODO_LIST,UPDATE_SIZE, TOGGLE_TODO} from "../constants/constant";
+import {UPDATE_TODO_LIST,UPDATE_SIZE, TOGGLE_TODO, REMOVE_TODO} from "../constants/constant";
 
 const initState = {size: 0, todoList: []};
 const TodoReducer = (state = initState, action) => {
@@ -15,6 +15,8 @@ const TodoReducer = (state = initState, action) => {
                 }
                 return object;
             })};
+        case REMOVE_TODO:
+                return {...state, todoList: state.todoList.filter(content => content.ID !== action.payload)}
         default:
             return state;
     }

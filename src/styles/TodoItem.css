@@ -14,3 +14,7 @@
   border: 2px solid black;
   text-decoration:line-through;
 }
+
+.Delete-button{
+  float: right;
+}
