@@ -3,11 +3,9 @@ import TodoGenerator from "./TodoGenerator";
 import TodoGroup from "./TodoGroup";
 
 function TodoList(){
-    const [todo,setTodo] = useState("");
-    const [todoList] = useState([]);
+    const [todoList,setTodoList] = useState([]);
     function updateTodo(todo){
-        setTodo(todo);
-        todoList.push(todo);
+        setTodoList([...todoList,todo])    
     }
 
 
@@ -15,7 +13,7 @@ function TodoList(){
     return (
         <div>
             <h1>ToDo List</h1>
-            <TodoGroup todo={todo} todoList={todoList}></TodoGroup>
+            <TodoGroup  todoList={todoList}></TodoGroup>
             <TodoGenerator updateTodo={updateTodo}></TodoGenerator>
         </div>
         
