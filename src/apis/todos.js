@@ -9,23 +9,14 @@ export const addTodoItem = (item) =>{
 }
 
 
-// PUT combine 
-
 export const deleteTodoItem = (id) =>{
     return api.delete("/todos/"+id);
 }
 
 export const updateTodoItem = (item) =>{
-    // console.log('item',item)
-    // console.log('item.id',item.id)
     return api.put("/todos/"+item.id,item);
 }
 
-// export const updateTodoItemByNewTodo = (item) =>{
-//     console.log('item',item)
-//     console.log('item.id',item.id)
-//     return api.put("/todos/"+item.id,item);
-// }
 
 
 

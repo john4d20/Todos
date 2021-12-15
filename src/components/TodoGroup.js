@@ -5,8 +5,6 @@ import {useSelector} from "react-redux"
 function TodoGroup(props){
 
     const todoList = useSelector((state) => state.todoList);
-    console.log('todoList',todoList)
-
     return (
         <div>
             <span>

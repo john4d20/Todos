@@ -5,6 +5,7 @@ import { INIT_TODO } from "../constants/constant";
 import TodoGenerator from "./TodoGenerator";
 import TodoGroup from "./TodoGroup";
 import {getTodos} from "../apis/todos"
+import "../styles/TodoList.css"
 
 function TodoList(){
     const dispatch = useDispatch();
@@ -15,7 +16,7 @@ function TodoList(){
         })
     })
     return (
-        <div>
+        <div className="background">
             <h1>ToDo List</h1>
             <TodoGenerator ></TodoGenerator>
             <TodoGroup  ></TodoGroup>
