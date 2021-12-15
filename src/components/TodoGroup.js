@@ -5,11 +5,12 @@ import {useSelector} from "react-redux"
 function TodoGroup(props){
 
     const todoList = useSelector((state) => state.todoList);
+    console.log('todoList',todoList)
 
     return (
         <div>
             <span>
-            {todoList.map((item, index)=><TodoItem key={item.ID} content={item.content} id={item.ID} done={item.done}/>)}
+            {todoList.map((item, index)=><TodoItem key={item.id} content={item.content} id={item.id} done={item.done}/>)}
             </span>
         </div>
     )

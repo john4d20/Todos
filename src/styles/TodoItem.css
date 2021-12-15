@@ -3,18 +3,29 @@
     margin-top: 3px;
     width: 30%;
     padding: 5px;
+    /* display: inline; */
     border: 2px solid black;
   }
 
 .Done-todo-item{
+
+  text-decoration:line-through;
+}
+
+.box{
   margin: auto;
   margin-top: 3px;
   width: 30%;
   padding: 5px;
   border: 2px solid black;
-  text-decoration:line-through;
 }
 
 .Delete-button{
+  padding: 5px;
+  float: right;
+}
+
+.Update-button{
+  padding: 5px;
   float: right;
 }

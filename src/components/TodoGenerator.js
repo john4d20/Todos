@@ -2,22 +2,21 @@ import { useState } from "react";
 import "../styles/TodoGernerator.css"
 import {useDispatch} from "react-redux";
 import {  CREATE_TODO } from "../constants/constant";
-import { v4 as uuidv4 } from "uuid";
 import {addTodoItem} from "../apis/todos"
+import {Button, Input} from 'antd'
 
 function TodoGenerator(props){
     const dispatch = useDispatch();
     const[todo,setTodo] = useState("");
 
     function add(){
+        if(todo.trim() !== ""){
         addTodoItem({content : todo,done : false}).then((Response) =>{
             dispatch({type: CREATE_TODO, payload: Response.data})
         }
             
-        )
-        // if(todo.trim() !== ""){
-        //     dispatch({type: CREATE_TODO, payload:{content: todo, ID:uuidv4(), done: false}})
-        // }
+        )}
+
         setTodo("");    
         
         
@@ -29,8 +28,8 @@ function TodoGenerator(props){
 
     return(
         <>
-            <input value={todo} type="text" onChange={handleContentValue} className="Input-field"></input>
-            <button onClick={add} className="Add-button">add</button>
+            <Input  style={{ width: 500 }} placeholder="Please type words" value={todo} type="text" onChange={handleContentValue} className="Input-field"></Input>
+            <Button type="primary" onClick={add} >add</Button>
         </>
     )
 }
