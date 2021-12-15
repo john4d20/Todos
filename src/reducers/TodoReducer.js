@@ -8,20 +8,17 @@ const TodoReducer = (state = initState, action) => {
             return {todoList: [...state.todoList, action.payload]}
         case TOGGLE_TODO:
             return {todoList: state.todoList.map(function(object){
-                if(object.id === action.payload){
+                if(object.id === action.payload.id){
                     object.done = !object.done;
                 }
                 return object;
             })};
         case REMOVE_TODO:
-            return { todoList: state.todoList.filter(content => content.id !== action.payload)}
+            return { todoList: state.todoList.filter(content => content.id !== action.payload.id)}
         case INIT_TODO:
             return {todoList: action.payload}
         case UPDATE_TODO:
-            console.log('>>>>>>>>>>>>>>>>>>state.todoList',state.todoList)
             return {todoList: state.todoList.map(function(object){
-                console.log('>>>>>>>>>>>>>>>>>>object',object)
-                console.log('>>>>>>>>>>>>>>>>action.payload.id',action.payload.id)
                 if(object.id === action.payload.id){
                     object.content = action.payload.content;
                 }

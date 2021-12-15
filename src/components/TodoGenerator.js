@@ -14,7 +14,6 @@ function TodoGenerator(props){
         addTodoItem({content : todo,done : false}).then((Response) =>{
             dispatch({type: CREATE_TODO, payload: Response.data})
         }
-            
         )}
 
         setTodo("");    

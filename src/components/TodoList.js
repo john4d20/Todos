@@ -10,7 +10,6 @@ function TodoList(){
     const dispatch = useDispatch();
     useEffect(()=> {
         getTodos().then((response)=>{
-            console.log("response",response.data)
             dispatch({type: INIT_TODO, payload: response.data})
 
         })

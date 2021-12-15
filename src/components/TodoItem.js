@@ -13,16 +13,13 @@ function TodoItem(props){
     const[todo,setTodo] = useState("");
     function updateTodo(){
         updateTodoItem({id:props.id, content:props.content, done:!props.done}).then((Response=>{
-            // console.log(Response)
-            console.log('aaaaaaaaaaaaaaaaaaaaaaaaa')
-            dispatch({type:TOGGLE_TODO,payload: Response.data.id})
+            dispatch({type:TOGGLE_TODO,payload: Response.data})
         }))
 
     };
     function removeTodoList(){
-        // console.log('props.id',props.id)
         deleteTodoItem(props.id).then((Response=>{
-            dispatch({type:REMOVE_TODO,payload: Response.data.id})
+            dispatch({type:REMOVE_TODO,payload: Response.data})
         }))
 
     }
@@ -33,7 +30,6 @@ function TodoItem(props){
     const handleOk = () => {
         setIsModalVisible(false);
         updateTodoItem({id:props.id, content:todo, done:props.done}).then((Response=>{
-            console.log('>>>>>>>>>>>>>>>>>>>>Response',Response.data)
             dispatch({type:UPDATE_TODO,payload: Response.data})
         }))
       };
