@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "../styles/TodoGernerator.css"
 import {useDispatch} from "react-redux";
-import { UPDATE_SIZE, UPDATE_TODO_LIST } from "../constants/constant";
+import {  CREATE_TODO } from "../constants/constant";
 import { v4 as uuidv4 } from "uuid";
 
 function TodoGenerator(props){
@@ -9,11 +9,11 @@ function TodoGenerator(props){
     const[todo,setTodo] = useState("");
 
     function add(){
-        if(todo !== ""){
-            dispatch({type: UPDATE_SIZE, payload: 1})
-            dispatch({type: UPDATE_TODO_LIST, payload:{"content": todo, "ID":uuidv4(), "done": false}})
-            setTodo("");
+        if(todo.trim() !== ""){
+            dispatch({type: CREATE_TODO, payload:{content: todo, ID:uuidv4(), done: false}})
         }
+        setTodo("");    
+        
         
     }
 

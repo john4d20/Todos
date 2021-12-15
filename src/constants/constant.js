@@ -1,4 +1,3 @@
-export const UPDATE_SIZE = "todo/updateSize"
-export const UPDATE_TODO_LIST = "todo/updateTodoList"
-export const TOGGLE_TODO = "todo/toggle_todo"
+export const CREATE_TODO = "todo/createTodo"
+export const TOGGLE_TODO = "todo/toggleTodo"
 export const REMOVE_TODO = "todo/deleteTodoList"
