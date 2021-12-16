@@ -10,7 +10,7 @@ import Modal from "antd/lib/modal/Modal";
 function TodoItem(props){
     const [isModalVisible, setIsModalVisible] = useState(false);
     const dispatch = useDispatch();
-    const[content,setContent] = useState("");
+    const[content,setContent] = useState(props.content);
     function updateTodo(){
         updateTodoItem({id:props.id, content:props.content, done:!props.done}).then((response=>{
             dispatch({type:TOGGLE_TODO,payload: response.data})
