@@ -5,29 +5,26 @@ import {  CREATE_TODO } from "../constants/constant";
 import {addTodoItem} from "../apis/todos"
 import {Button, Input} from 'antd'
 
-function TodoGenerator(props){
+function TodoGenerator(){
     const dispatch = useDispatch();
-    const[todo,setTodo] = useState("");
+    const[content,setContent] = useState("");
 
     function add(){
-        if(todo.trim() !== ""){
-        addTodoItem({content : todo,done : false}).then((Response) =>{
+        if(content.trim() !== ""){
+        addTodoItem({content : content ,done : false}).then((Response) =>{
             dispatch({type: CREATE_TODO, payload: Response.data})
         }
         )}
-
-        setTodo("");    
-        
-        
+        setContent("");    
     }
 
     function handleContentValue(event){
-        setTodo(event.target.value);
+        setContent(event.target.value);
     }
 
     return(
         <>
-            <Input  style={{ width: 500 }} placeholder="Please type words" value={todo} type="text" onChange={handleContentValue} className="Input-field"></Input>
+            <Input  style={{ width: 500 }} placeholder="Please type words" value={content} type="text" onChange={handleContentValue} className="Input-field"></Input>
             <Button type="primary" onClick={add} >add</Button>
         </>
     )

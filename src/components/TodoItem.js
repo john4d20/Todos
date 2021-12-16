@@ -27,7 +27,6 @@ function TodoItem(props){
         setIsModalVisible(true);
       };
       
-    //  TODO: rename todo  
     const handleOk = () => {
         setIsModalVisible(false);
         updateTodoItem({id:props.id, content:content, done:props.done}).then((response=>{
