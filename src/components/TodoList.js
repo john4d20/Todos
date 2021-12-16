@@ -16,7 +16,7 @@ function TodoList(){
         })
     })
     return (
-        <div className="background">
+        <div >
             <h1>ToDo List</h1>
             <TodoGenerator ></TodoGenerator>
             <TodoGroup  ></TodoGroup>

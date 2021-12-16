@@ -15,9 +15,9 @@ import "./styles/TodoList.css"
 function App() {
   
   return (
-    
+  
     <Router>
-      <div className="background">
+      <div>
         <nav>
           <ul>
             <List>
