@@ -1,13 +1,12 @@
 import {useSelector} from "react-redux"
-import TodoItem from "./TodoItem";
 
 function UnDoneGroup(){
 
-    const todoList = useSelector((state) => state.todoList);
+    const undoneList = useSelector((state) => state.todoList.filter(item => !item.done));
 
     return (
         <div>{
-            todoList.filter(item => !item.done).map((item, index) => {
+            undoneList.filter(item => !item.done).map((item, index) => {
                return <p key={item+index}> {item.content} </p>
             })
       }</div>      

@@ -7,18 +7,17 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
-  useRouteMatch,
-  useParams
+  Link
 } from "react-router-dom";
 import {List} from 'antd'
+import "./styles/TodoList.css"
 
 function App() {
   
   return (
     
     <Router>
-      <div >
+      <div className="background">
         <nav>
           <ul>
             <List>
@@ -33,9 +32,7 @@ function App() {
           </ul>
         </nav>
 
-        {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
-            <div className="App">
+        <div className="App">
         <Switch>
           <Route path="/done">
             <DoneList></DoneList>
@@ -47,7 +44,7 @@ function App() {
             <TodoList></TodoList>
           </Route>
         </Switch>
-      </div>
+        </div>
       </div>
     </Router>
     
